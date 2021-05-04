@@ -1,0 +1,12 @@
+.buttons{
+    padding:px;
+}
+
+.container{
+    text-align: center;
+}
+
+#counter {
+    margin: 15px;
+    font-size: 30px;
+}
