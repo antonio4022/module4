@@ -5,7 +5,6 @@ let msg = document.querySelector("#msg");
 button.addEventListener("click", onSubmit());
 reset.addEventListener("click", start);
 let count = 0;
-let numberOfGuess = 3;
 let randomNum = (Math.floor(Math.random() * 100) + 1);
 
 function onSubmit() {
@@ -20,8 +19,8 @@ function onSubmit() {
     } else if (textGuess < randomNum) {
         msg.text = "Too Low Try again."
         count++
-    } else if (count == numberOfGuess)
-        break;
+    } else if (count == 3;)
+    break;
     else {
         msg.text = "Error!!";
     }
