@@ -1,28 +1,36 @@
 let button = document.querySelector("#button");
-let reset = document.querySelector("#resetButton");
-let textGuess = document.querySelector("#text").value;
+let input = document.querySelector("#text");
 let msg = document.querySelector("#msg");
-button.addEventListener("click", onSubmit());
-reset.addEventListener("click", start);
-let count = 0;
-let randomNum = (Math.floor(Math.random() * 100) + 1);
+button.addEventListener("click", onSubmit);
+let count = 1;
+let randomNum = 100;
+function onSubmit(event) {
+    event.preventDefault()
+    let textGuess = input.value;
+    textGuess = ''
 
-function onSubmit() {
-
-    if (textGuess == randomNum) {
-        msg.text = "You Guessed Correct!!";
-        break;
+    if (count == 3) {
+        msg.innerHTML = "Your 3 tries have been used. Start over.";
+        button.innerHTML = 'reset';
+        count = 1;
+        textGuess = ''
+    }
+    else if (textGuess == randomNum) {
+        msg.innerHTML = "You Guessed Correct!!";
+        button.innerHTML = 'Submit';
     }
     else if (textGuess > randomNum) {
-        msg.text = "Too High. Try again.";
+        msg.innerHTML = "Too High. Try again.";
+        button.innerHTML = 'Submit';
         count++
     } else if (textGuess < randomNum) {
-        msg.text = "Too Low Try again."
+        msg.innerHTML = "Too Low Try again."
+        button.innerHTML = 'Submit';
         count++
-    } else if (count == 3;)
-    break;
+    }
     else {
-        msg.text = "Error!!";
+        msg.innerHTML = "Error!!";
+        button.innerHTML = 'Submit';
     }
 
 }
