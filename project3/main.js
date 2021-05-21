@@ -3,7 +3,7 @@ let input = document.querySelector("#text");
 let msg = document.querySelector("#msg");
 button.addEventListener("click", onSubmit);
 let count = 1;
-let randomNum = 100;
+let randomNum = (Math.floor(Math.random() * 100) + 1);
 function onSubmit(event) {
     event.preventDefault()
     let textGuess = input.value;
