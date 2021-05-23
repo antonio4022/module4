@@ -7,10 +7,11 @@ let randomNum = (Math.floor(Math.random() * 100) + 1);
 function onSubmit(event) {
     event.preventDefault()
     let textGuess = input.value;
+    let reset = ''
     textGuess = ''
 
     if (count == 3) {
-        msg.innerHTML = "Your 3 tries have been used. Start over.";
+        msg.innerHTML = "Your 3 tries have been used. The number was " + randomNum;
         button.innerHTML = 'reset';
         count = 1;
         textGuess = ''
