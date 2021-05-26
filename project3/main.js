@@ -12,13 +12,10 @@ function onSubmit(event) {
         input.value = '';
         button.innerHTML = 'Reset';
         if ('Reset') {
-            onclick(
-                count = 0;
+
+            count = 0;
             randomNum = (Math.floor(Math.random() * 100) + 1);
-            )
         }
-
-
     }
     else if (textGuess == randomNum) {
         msg.innerHTML = "You Guessed Correct!!";
