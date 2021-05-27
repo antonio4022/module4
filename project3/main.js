@@ -16,23 +16,32 @@ function onSubmit(event) {
             count = 0;
             randomNum = (Math.floor(Math.random() * 100) + 1);
         }
-    }
-    else if (textGuess == randomNum) {
-        msg.innerHTML = "You Guessed Correct!!";
-        button.innerHTML = 'Submit';
-    }
-    else if (textGuess > randomNum) {
-        msg.innerHTML = "Too High Try again.";
-        button.innerHTML = 'Submit';
-        count++
-    } else if (textGuess < randomNum) {
-        msg.innerHTML = "Too Low Try again.";
-        button.innerHTML = 'Submit';
-        count++
-    } else {
-        msg.innerHTML = "Error!!";
-        button.innerHTML = 'Submit';
-    }
+
+    } elseif
+        (textGuess == '')
+    msg.innerHTML = '';
+    button.innerHTML = 'Submit';
+    count = 0;
 
 }
+elseif(textGuess == randomNum)
+msg.innerHTML = "You Guessed Correct!!";
+button.innerHTML = 'Submit';
+
+elseif(textGuess > randomNum)
+msg.innerHTML = "Too High Try again.";
+button.innerHTML = 'Submit';
+count++
+console.log(textGuess);
+elseif(textGuess < randomNum)
+msg.innerHTML = "Too Low Try again.";
+button.innerHTML = 'Submit';
+count++
+console.log(textGuess);
+ else
+msg.innerHTML = "Error!!";
+button.innerHTML = 'Submit';
+
+
+
 
