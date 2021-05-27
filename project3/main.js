@@ -11,6 +11,11 @@ function onSubmit(event) {
         msg.innerHTML = "Your 3 tries have been used. The number was " + randomNum;
         input.value = '';
         button.innerHTML = 'Reset';
+        // if ('reset') {
+        //     count = 0;
+        //     msg.innerHTML = '';
+        //     randomNum = (Math.floor(Math.random() * 100) + 1);
+        // }
 
 
     } else if
@@ -39,4 +44,6 @@ function onSubmit(event) {
         msg.innerHTML = "Error!!";
         button.innerHTML = 'Submit';
     }
+
+}
 
