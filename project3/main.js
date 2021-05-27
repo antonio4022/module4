@@ -11,38 +11,32 @@ function onSubmit(event) {
         msg.innerHTML = "Your 3 tries have been used. The number was " + randomNum;
         input.value = '';
         button.innerHTML = 'Reset';
-        if ('Reset') {
-            console.log(count);
-            count = 0;
-            randomNum = (Math.floor(Math.random() * 100) + 1);
-        }
 
-    } elseif
-        (textGuess == ''){
+
+    } else if
+        (textGuess == '') {
         msg.innerHTML = '';
         button.innerHTML = 'Submit';
         count = 0;
-    } elseif(textGuess == randomNum){
+    } else if (textGuess == randomNum) {
         msg.innerHTML = "You Guessed Correct!!";
         button.innerHTML = 'Submit';
     }
 
-    elseif(textGuess > randomNum){
+    else if (textGuess > randomNum) {
         msg.innerHTML = "Too High Try again.";
         button.innerHTML = 'Submit';
         count++
     }
-    console.log(textGuess);
-    elseif(textGuess < randomNum){
+
+    else if (textGuess < randomNum) {
         msg.innerHTML = "Too Low Try again.";
         button.innerHTML = 'Submit';
         count++
     }
-    console.log(textGuess);
- else
-    msg.innerHTML = "Error!!";
-    button.innerHTML = 'Submit';
 
-}
-
+    else {
+        msg.innerHTML = "Error!!";
+        button.innerHTML = 'Submit';
+    }
 
