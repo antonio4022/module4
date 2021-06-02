@@ -7,6 +7,7 @@ let yourChoice = document.getElementById('yourChoice');
 
 let computerChoice
 
+
 rock.addEventListener("click", generateComputerChoice);
 paper.addEventListener("click", generateComputerChoice);
 scissors.addEventListener("click", generateComputerChoice);
@@ -15,27 +16,10 @@ scissors.addEventListener("click", generateComputerChoice);
 
 
 
-function generateComputerChoice(event) {
-
-    let randomNum = Math.floor(Math.random() * 3) + 1;
-
-    if (randomNum === 1) {
-        computerChoice = 'rock';
-    }
-    if (randomNum === 2) {
-        computerChoice = 'paper';
-    }
-    if (randomNum === 3) {
-        computerChoice = 'scissors';
-    }
-
-    msg.innerHTML = 'The computer choose ' + computerChoice;
-}
-
-
 function detail(event) {
     var userChoice = event.target.id
     console.log(userChoice);
+    generateComputerChoice();
     if (computerChoice == userChoice) {
         result.innerHTML = 'It was a tie. try again'
         yourChoice.innerHTML = 'you choose ' + userChoice
@@ -64,4 +48,24 @@ function detail(event) {
         result.innerHTML = 'You lose, scissors beats papar!'
         yourChoice.innerHTML = 'you choose ' + userChoice
     }
+
+
+
+
+}
+function generateComputerChoice(event) {
+
+    let randomNum = Math.floor(Math.random() * 3) + 1;
+
+    if (randomNum === 1) {
+        computerChoice = 'rock';
+    }
+    if (randomNum === 2) {
+        computerChoice = 'paper';
+    }
+    if (randomNum === 3) {
+        computerChoice = 'scissors';
+    }
+
+    msg.innerHTML = 'The computer choose ' + computerChoice;
 }
