@@ -13,28 +13,26 @@ function answerCheck() {
     var result2 = document.getElementById("answer2");
     var result3 = document.getElementById("answer3");
     var result4 = document.getElementById("answer4");
+    var correct = document.getElementById('correct');
 
-    console.log("hi");
+
+
     for (i = 0; i < ele1.length; i++) {
-        if (ele1[i].checked)
-            return document.getElementById("result1").innerHTML
-                = "The correct answer is  " + ele1[i].value;
+        if (ele1[i].checked == correct)
+            "result1".innerHTML = "The correct answer is  " + ele1[i].value;
     }
 
     for (i = 0; i < ele2.length; i++) {
-        if (ele2[i].checked)
-            return document.getElementById("result2").innerHTML
-                = "The correct answer is  " + ele2[i].value;
+        if (ele2[i].checked == correct)
+            "result2".innerHTML = "The correct answer is  " + ele2[i].value;
     }
     for (i = 0; i < ele3.length; i++) {
-        if (ele3[i].checked)
-            return document.getElementById("result3").innerHTML
-                = "The correct answer is  " + ele3[i].value;
+        if (ele3[i].checked == correct)
+            "result3".innerHTML = "The correct answer is  " + ele3[i].value;
     }
     for (i = 0; i < ele4.length; i++) {
-        if (ele4[i].checked)
-            return document.getElementById("result4").innerHTML
-                = "The correct answer is " + ele4[i].value;
+        if (ele4[i].checked == correct)
+            "result4".innerHTML = "The correct answer is " + ele4[i].value;
     }
 
 }
