@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Document</title>
 </head>
 
 <body>
     <form name="quiz" id="quiz">
         <div>
+            <h1 id="correct"></h1>
             <p>1.What country openly helped Nazis criminals escape punishment?
             </p>
             <p><input type="radio" name="question1" value="germany">A. Germany
@@ -18,22 +20,22 @@
             <p><input type="radio" name="question1" value="argentina">B.
                 Argentina</p>
             <p><input type="radio" name="question1" value="japan">C. Japan</p>
-            <p><input type="radio" name="question1"
-                    value="America(Operation Paperclip)" id="correct">D. America
+            <p><input type="radio" name="question1" value="america">D. America
             </p>
             <h2 id="answer1"></h2>
+            <h2 id="answer1a"></h2>
         </div>
         <div>
             <p>2.What country defeated Nazis Germany?</p>
             <p><input type="radio" name="question2" value="america ">A. America
             </p>
             <p><input type="radio" name="question2" value="France">B. France</p>
-            <p><input type="radio" name="question2"
-                    value="Russia(4 years and over 20million loses)"
-                    id="correct">C. Russia
+            <p><input type="radio" name="question2" value="Russia">C. Russia
             </p>
             <p><input type="radio" name="question2" value="Israel">D. Israel</p>
             <h2 id="answer2"></h2>
+            <h2 id="answer2a"></h2>
+
         </div>
         <div>
             <p>3.What state did the C.I.A. plan to bomb in order to blame Cuba
@@ -41,31 +43,34 @@
             <p><input type="radio" name="question3" value="texas">A. Texas</p>
             <p><input type="radio" name="question3" value="california">B.
                 California</p>
-            <p><input type="radio" name="question3"
-                    value="florida (Operasation Northwoods)" id="correct">C.
+            <p><input type="radio" name="question3" value="florida">C.
                 Florida
             </p>
             <p><input type="radio" name="question3" value="georgia">D. Georgia
             </p>
             <h2 id="answer3"></h2>
+            <h2 id="answer3a"></h2>
+
         </div>
         <div>
             <p>4.Why did Texas give up the strip of land in the north east to
                 Oklahoma?</p>
-            <p><input type="radio" name="question4" value="lousiana purcharse"
-                    id="correct">A. lousiana purchase</p>
             <p><input type="radio" name="question4"
-                    value="to keep slavery(missouri Compromise)">B.
+                    value="lousiana purcharse">A. lousiana purchase</p>
+            <p><input type="radio" name="question4" value="To keep slavery">B.
                 To keep slavery</p>
             <p><input type="radio" name="question4" value="poker match">C. Poker
                 match</p>
             <p><input type="radio" name="question4" value="war with oklahoma">D.
                 War with Oklahoma</p>
             <h2 id="answer4"></h2>
+            <h2 id="answer4a"></h2>
+
         </div>
         <input type="button" value="check answers" id="check"
             onClick="answerCheck()">
     </form>
+    <script src="main.js"></script>
 </body>
 
 </html>
