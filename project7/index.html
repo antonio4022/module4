@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tip Calculator</h1>
+
+    <div>
+        <label for="amount">Total Amount</label>
+        <input type="number" min="0" name="amount" value="0" id="amount">
+    </div>
+    <div>
+        <label for="tip">Tip %</label>
+        <input type="number" step="1" name="tip" value="0" id="tip">
+    </div>
+    <button onclick="calculateAmountOwed()">Calucate</button>
+    <div id="owedAmount"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
