@@ -8,10 +8,8 @@ var calculateAmountOwed = function () {
     var finalBill = tipAmount + amountNumber;
 
 
-    document.getElementById('tipAmount').innerHTML = 'The tip amount is $' + tipAmount;
+    document.getElementById('tipAmount').innerHTML = 'The tip amount is $' + tipAmount.toFixed(2);
 
-    document.getElementById('totalBill').innerHTML = 'The total bill is ' + finalBill;
-
-    // document.getElementById('totalBill').innerHTML = 'Your total bill is $' + finalBill;
+    document.getElementById('totalBill').innerHTML = 'The total bill is ' + finalBill.toFixed(2);
 
 }
