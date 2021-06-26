@@ -1,10 +1,17 @@
 
 var calculateAmountOwed = function () {
     var amount = document.querySelector('#amount').value;
-    var tip = document.querySelector('#tip').value;
-    var bill = document.querySelector('#owedAmount').value;
+    var tipPercent = document.querySelector('#tip').value;
+    var amountNumber = parseInt(amount);
+    var tip = parseInt(tipPercent);
+    var tipAmount = amountNumber * (tipPercent / 100);
+    var finalBill = tipAmount + amountNumber;
 
-    var tipAmount = amount * (tip / 100);
-    var finalBill = tipAmount + amount;
-    return document.getElementById('bill') = finalBill;
+
+    document.getElementById('tipAmount').innerHTML = 'The tip amount is $' + tipAmount;
+
+    document.getElementById('totalBill').innerHTML = 'The total bill is ' + finalBill;
+
+    // document.getElementById('totalBill').innerHTML = 'Your total bill is $' + finalBill;
+
 }

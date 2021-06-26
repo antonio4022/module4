@@ -16,24 +16,13 @@ function answerCheck() {
     let c = 0;
 
 
-    if (ele1.checked === true) {
-        c++
-    }
-    if (ele2.checked === true) {
-        c++
-    }
-    if (ele3.checked === true) {
-        c++
-    }
-    if (ele4.checked === true) {
-        c++
-    }
+
 
 
     for (i = 0; i < ele1.length; i++) {
-        if (ele1[3].checked === true) {
+        if (i === 3 && ele1[3].checked === true) {
             document.getElementById('answer1').innerHTML = "That is correct. (Operation paperclip)";
-
+            c++
 
         } else {
             document.getElementById('answer1a').innerHTML = "That is incorrect.please try again";
@@ -42,15 +31,15 @@ function answerCheck() {
     }
 
     for (i = 0; i < ele2.length; i++) {
-        if (ele2[2].checked === true) {
+        if (i === 2 && ele2[2].checked === true) {
             document.getElementById('answer2').innerHTML = "That is correct. more than 20 million Russian lives lost.";
-
+            c++
         } else {
             document.getElementById('answer2a').innerHTML = "That is incorrect.please try again";
         }
     }
     for (i = 0; i < ele3.length; i++) {
-        if (ele3[2].checked === true) {
+        if (i === 2 && ele3[2].checked === true) {
             document.getElementById('answer3').innerHTML = "That is correct. (Operation Northwoods)";
 
         } else {
@@ -61,7 +50,7 @@ function answerCheck() {
     for (i = 0; i < ele4.length; i++) {
         if (ele4[1].checked === true) {
             document.getElementById('answer4').innerHTML = "That is correct. (The Missouri Comprimise.)";
-
+            c++
         } else {
             document.getElementById('answer4a').innerHTML = "That is incorrect.please try again";
         }
